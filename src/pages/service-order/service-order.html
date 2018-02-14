@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="carlabC">
+    <ion-title>Resumen y Pago</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-grid>
+
+      <ion-row>
+        <ion-card id="title-card">
+          <div id="order-service-title" text-right>
+            {{ service_name }}
+          </div>
+          <div id="order-service-content">
+            <div id="order-service-image">
+              <img src="assets/imgs/{{ category_image }}">
+            </div>
+            <div id="order-service-data" >
+              <div class="order-service-data-c" text-center>
+                {{ category_name }}
+              </div>
+              <div class="order-service-data-c" >
+                PRECIO: <br>
+                {{ category_price }} $
+              </div>
+              <div class="order-service-data-c" >
+                DURACIÓN DEL SERVICIO: <br>
+                {{ category_duration }} min.
+              </div>
+            </div>
+          </div>
+          <div id="order-service-bottom">
+            <!-- <div class="order-service-button">
+              <button ion-button color="carlabC"(click)="addCard()">Datos de compra</button>
+            </div> -->
+            <div class="order-service-button">
+              <button ion-button color="carlabC" (click)="reserveService()">Reserva</button>
+            </div>
+          </div>
+        </ion-card>
+      </ion-row>
+
+      <ion-row>
+        <ion-card id="map-card">
+            <div id="map_container"></div>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
+  </ion-grid>
+</ion-content>
+<!-- <ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-cardd padding>
+        <div class="order-title-section">
+          <h1>{{ service_name }}</h1>
+          <img src="assets/imgs/{{ category_image }}">
+        </div>
+        <div class="order-title-section-elements" >
+          <div class="order-element" text-left>
+            <h1>Precio</h1>
+            <ion-icon name="md-cash"></ion-icon>
+            {{ category_price }} $
+          </div>
+          <div class="order-element" text-left>
+            <h1>Duración Aproximada</h1>
+            <ion-icon name="clock"></ion-icon>
+            {{ category_duration }} min.
+          </div>
+          <div class="order-element" text-left>
+            <h1>Categoria</h1>
+            {{ category_name }}
+          </div>
+        </div>
+      </ion-card>
+    </ion-row>
+
+    <ion-row>
+      <ion-card id="map-card">
+          <div id="map_container"></div>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content> -->

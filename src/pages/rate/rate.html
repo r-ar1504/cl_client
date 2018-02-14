@@ -1,0 +1,91 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Evaluar Servicio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row text-center margin>
+      <h3>Tu opinion es muy importante para nosotros, con ella te podremos brindar un mejor servicio.</h3>
+    </ion-row>
+    <form [formGroup]="evaluation">
+    <ion-row  justify-content-center full-with id="rate-checks">
+        <ion-col col-12>
+          <ion-list radio-group formControlName="l_e" no-padding>
+            <ion-list-header>
+              Limpieza Exterior
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Regular</ion-label>
+              <ion-radio value=".5556"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Bueno</ion-label>
+              <ion-radio value="1.1112"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Excelente</ion-label>
+              <ion-radio value="1.6668"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col col-12>
+          <ion-list radio-group formControlName="l_i" no-padding>
+            <ion-list-header>
+              Limpieza Interior
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Regular</ion-label>
+              <ion-radio value=".5556"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Bueno</ion-label>
+              <ion-radio value="1.1112" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Excelente</ion-label>
+              <ion-radio value="1.6668" ></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col col-12>
+          <ion-list radio-group formControlName="ll_v" no-padding >
+            <ion-list-header>
+              Llantas y Vidrios
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Regular</ion-label>
+              <ion-radio value=".5556" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Bueno</ion-label>
+              <ion-radio value="1.1112" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Excelente</ion-label>
+              <ion-radio value="1.6668" ></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row justify-content-center full-with id="rate-checks">
+      <ion-col col-12>
+        <ion-list no-padding>
+          <ion-list-header>
+            Comentarios
+          </ion-list-header>
+          <ion-item>
+            <ion-textarea placeholder="Queremos escucharte." formControlName="com"></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center full-with id="rate-checks">
+      <button ion-button color="carlabC" (click)="addCard()" [disabled]="evaluation.valid">Evaluar</button>
+    </ion-row>
+    </form>
+  </ion-grid>
+
+</ion-content>

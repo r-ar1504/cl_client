@@ -1,0 +1,55 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyAsY558WrqubYg1rVjzuNa-Hwif_UpgYu\nc",
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "sn.cl.cliente"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "886212431542854",
+      "APP_NAME": "Carlab_client",
+      "PACKAGE_NAME": "sn.cl.cliente"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "sn.cl.cliente"
+    },
+    "card.io.cordova.mobilesdk": {
+      "PACKAGE_NAME": "sn.cl.cliente"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "sn.cl.cliente"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "sn.cl.cliente"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "sn.cl.cliente"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar color="carlabC">
+    <ion-title>Detalles</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+  <ion-grid no-margin class="animated slideInRight" >
+    <ion-card class="card-service" text-center>
+      <div class="card-title">
+        {{ service_name }}
+      </div>
+      <div class="card-subtitle">{{ service_description }}</div>
+    </ion-card>
+    <ion-list>
+      <ion-card *ngFor="let category of categories" (click)="openOrder( service_name , category.id ,  category.name ,  category.price ,  category.duration, category.image, service_id)">
+        <div class="serice-card-element">
+          <img src="assets/imgs/{{ category.image }}">
+        </div>
+        <div class="serice-card-element">
+          {{ category.name }}
+        </div>
+        <div class="serice-card-element">
+          $ {{ category.price }}
+        </div>
+        <div class="serice-card-element">
+          {{ category.duration }} min.
+        </div>
+      </ion-card>
+      <!-- <ion-card class="category-card"  padding *ngFor="let category of categories" (click)="openOrder( service_name , category.id ,  category.name ,  category.price ,  category.duration, category.image)">
+
+        <ion-card-content class="cats">
+          <div class="cat-header">
+            <img src="assets/imgs/{{ category.image }} ">
+          </div>
+          <div class="cat-header" text-center>
+            {{ category.name }}
+          </div>
+          <div class="cat-content">
+            <ion-icon name="md-cash"></ion-icon>
+            {{ category.price }}  $
+          </div>
+          <div class="cat-content">
+            <ion-icon name="clock"></ion-icon>
+            {{ category.duration }}  min.
+          </div>
+        </ion-card-content>
+      </ion-card> -->
+    </ion-list>
+  </ion-grid>
+</ion-content>

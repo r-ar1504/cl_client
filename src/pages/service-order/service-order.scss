@@ -1,0 +1,77 @@
+page-service-order {
+  ion-content{
+    background: url("../../assets/imgs/backgroundC.png");
+    background-size: contain;
+    }
+  #map_container{
+    width: 100%;
+    height: 300px;
+  }
+
+  ion-grid{
+    height: 100%;
+  }
+
+  #title-card{
+    color:#acc41e;
+    font-variant: small-caps;
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+
+    #order-service-title{
+      font-size: 1.5em;
+      padding: 10px;
+    }
+    #order-service-content{
+      display: flex;
+      flex-flow: row;
+    }
+    #order-service-image{
+      width: 30%;
+      img{
+        padding: 10px;
+        width: 90px;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #acc41e;
+    }
+    #order-service-data{
+      padding: 15px;
+      padding-left: 35px;
+      .order-service-data-c{
+        padding: 5px;
+      }
+    }
+    #order-service-bottom{
+      display: flex;
+      flex-flow: row;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+
+      .order-service-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        button{
+          width: 90%;
+          color: black;
+          font-variant: none;
+        }
+      }
+    }
+  }
+  #conf-button{
+    margin: 0 auto;
+    border-style: none;
+    button{
+      color: black;
+    }
+  }
+}

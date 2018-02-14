@@ -1,0 +1,17 @@
+page-reservation {
+  ion-label{
+    color: black;
+  }
+  form{
+    width: 100%;
+  }
+
+  .form_col{
+    display: flex;
+    flex-flow: row;
+
+    ion-input{
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Agenda tu servicio</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row text-center>
+      <form [formGroup]="reservation_data">
+        <ion-item>
+            <ion-label floating>Modelo del Auto</ion-label>
+            <ion-input type="text" formControlName="car_model"></ion-input>
+        </ion-item>
+        <ion-item >
+            <ion-label floating>Numero de Placa</ion-label>
+            <ion-input type="text" formControlName="car_plate"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button color="carlabC" (click)="addCard()">Escanear Tarjeta</button>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Tarjeta</ion-label>
+          <ion-input type="text" formControlName="card_number" value="{{billing.card_number}}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>CVV</ion-label>
+          <ion-input type="text" formControlName="cvv" value="{{billing.cvv}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Reservación Inmediata</ion-label>
+            <ion-checkbox  (ionChange)="setDate()" [checked]="true"></ion-checkbox>
+        </ion-item>
+
+         <ion-item  text-center *ngIf="set_date == true">
+          <ion-label> Fecha de servicio </ion-label>
+          <ion-datetime displayFormat="MMMM/DD h A " pickerFormat=" YY MMM D, h A" min="{{actual}}" max="{{max_date}}" formControlName="date"></ion-datetime>
+        </ion-item>
+
+        <ion-item text-center>
+          <button ion-button color="carlabC" (click)="searchWorker()">Solicitar</button>
+        </ion-item>
+      </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>
